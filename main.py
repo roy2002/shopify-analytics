@@ -18,7 +18,8 @@ app.add_middleware(
         "http://localhost:5173",
         "http://localhost:3000",
         "https://shopify-analytics-gaq0aze30.vercel.app",
-        "https://shopify-analytics-6u93.onrender.com"
+        "https://shopify-analytics-mvbu42k3h.vercel.app",
+        "https://shopify-analytics-six.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
