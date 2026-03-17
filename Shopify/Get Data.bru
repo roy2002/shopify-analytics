@@ -1,0 +1,39 @@
+meta {
+  name: Get Data
+  type: graphql
+  seq: 1
+}
+
+post {
+  url: https://testmarcadors.myshopify.com/admin/api/2024-01/graphql.json
+  body: graphql
+  auth: inherit
+}
+
+headers {
+  X-Shopify-Access-Token: {{SHOPIFY_ACCESS_TOKEN}}
+  Content-Type: application/json
+}
+
+body:graphql {
+  {
+    orders(first: 5) {
+      nodes {
+        id
+        name
+        createdAt
+        totalPriceSet {
+          shopMoney {
+            amount
+            currencyCode
+          }
+        }
+      }
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
